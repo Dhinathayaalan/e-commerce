@@ -7,7 +7,7 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private long id;
 	
 	@Column(nullable = false, length = 50)
 	private String name;
@@ -18,7 +18,7 @@ public class User {
 	@Column(nullable = false, unique = true)
 	private String password;
 
-	public User(int id, String name, String email, String password) {
+	public User(long id, String name, String email, String password) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -26,11 +26,11 @@ public class User {
 		this.password = password;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
